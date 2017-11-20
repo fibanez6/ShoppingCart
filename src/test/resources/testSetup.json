@@ -1,0 +1,26 @@
+{
+  "priceItem": [
+    {"name": "Soup", "price": 0.65},
+    {"name": "Bread", "price": 0.80},
+    {"name": "Milk", "price": 1.30},
+    {"name": "Apple", "price": 1.00}
+  ],
+  "offerItem": [
+    {
+      "name": "Soup",
+      "quantity": 2,
+      "discountItem": {
+        "name": "Bread",
+        "discountPercent": 50
+      }
+    },
+    {
+      "name": "Apple",
+      "quantity": 1,
+      "discountItem": {
+        "name": "Apple",
+        "discountPercent": 10
+      }
+    }
+  ]
+}

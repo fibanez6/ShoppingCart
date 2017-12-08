@@ -7,7 +7,9 @@ package com.fibanez.util;
  *
  * @author fibanez
  */
-public class ConfigUtilFactory {
+public final class ConfigUtilFactory {
+
+    private ConfigUtilFactory() {}
 
     public static ConfigUtil createConfigUtil(String data) {
         return new ConfigParserUtil(data);

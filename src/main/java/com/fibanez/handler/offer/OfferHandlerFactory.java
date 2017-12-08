@@ -8,7 +8,9 @@ import com.fibanez.model.PriceList;
  *
  * @author fibanez
  */
-public class OfferHandlerFactory {
+public final class OfferHandlerFactory {
+
+    private OfferHandlerFactory() {}
 
     public static OfferHandler createOfferHandler(OfferItem offerItem, PriceList priceList) {
         return new SimpleDiscountOfferHandler(offerItem, priceList);

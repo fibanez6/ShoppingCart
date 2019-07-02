@@ -28,8 +28,9 @@ public class SimpleDiscountOfferHandler extends OfferHandler {
     public void applyOffer(ShoppingCart shoppingCart, List<BillDiscount> billDiscountsResult) {
         long itemQuantity = shoppingCart.getQuantity(offerItem.getName());
 
-        if (itemQuantity > 0 && itemQuantity >= offerItem.getQuantity()) {
-            BillDiscount billDiscount = proccessDiscount(itemQuantity);
+        Long targetQuantity = shoppingCart.getQuantity(offerItem.getDiscountItem().getName());
+        if (itemQuantity > 0 && targetQuantity > 0 && itemQuantity >= offerItem.getQuantity()) {
+            BillDiscount billDiscount = proccessDiscount((long) Math.ceil((double) targetQuantity / itemQuantity));
             billDiscountsResult.add(billDiscount);
         }
 

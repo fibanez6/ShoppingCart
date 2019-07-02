@@ -75,7 +75,7 @@ public class MainTest {
         Bill bill = billGenerator.generateBill(shoppingCart);
 
         assertThat(bill.getSubtotal(), is(4.40));
-        assertThat(bill.getTotal(), closeTo(3.50, 0.000001));
+        assertThat(bill.getTotal(), closeTo(3.90, 0.000001));
         assertThat(bill.getBillDiscounts(), hasSize(2));
     }
 }
